@@ -1,9 +1,10 @@
 $(document).ready(function() {
 
-	// Click "Get Started" to be taken to form.
+	// Click "Get Started" to be taken to genre form.
 	$("#start").click(function() {
 		$(this).fadeOut(1000);
 		$(".intro").fadeOut(1000);
+		$("h1").fadeOut(1000);
 		formId = $("button").val();
 		console.log(formId);
 		var xhttp = new XMLHttpRequest();
@@ -242,6 +243,55 @@ $(document).ready(function() {
 					$("p." +formValTwo, "div#amount").fadeIn(1000);
 					$("p." + formValOne).fadeIn(1000);
 				});
+			});
+
+		// If the genre is libraries, the corresponding php file is posted.
+		}else if (formValOne ==  "libraries") {
+			console.log("libraries: " + formValOne);
+			var formId = "libraries";
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (xhttp.readyState == 4 && xhttp.status == 200) {
+			      document.getElementById(formId).innerHTML = xhttp.responseText;
+			    }
+			};
+		  	xhttp.open("POST", "includes/" + formId + ".php", true);
+		  	xhttp.send();
+			$(this).fadeOut(1000, function() {
+				$("form#" + formId).fadeIn(1000);
+			});
+
+			//If the libraries form changes, select value.
+			$("form#" + formId).change(function() {
+				var formValTwo = $("select.library-type").val();
+				console.log(formValTwo);
+				
+				
+				//Hide #library-type div of commercials form and show corresponding commissioning amount.
+				$("div#library-type").fadeOut(1000, function() {
+					$("h2", "div#amount").fadeIn(1000);
+					$("p." +formValTwo, "div#amount").fadeIn(1000);
+					$("p." + formValOne).fadeIn(1000);
+				});
+			});
+
+		// If the genre is videogames, the corresponding php file is posted.
+		}else if (formValOne ==  "videogames") {
+			console.log("videogames: " + formValOne);
+			var formId = "videogames";
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (xhttp.readyState == 4 && xhttp.status == 200) {
+			      document.getElementById(formId).innerHTML = xhttp.responseText;
+			    }
+			};
+		  	xhttp.open("POST", "includes/" + formId + ".php", true);
+		  	xhttp.send();
+			$(this).fadeOut(1000, function() {
+				$("form#" + formId).fadeIn(1000);
+				$("h2", "div#amount").fadeIn(1000);
+				$("p." + formValOne, "div#amount").fadeIn(1000);
+				$("button." + formValOne, "div#amount").fadeIn(1000);
 			});
 
 		}
