@@ -1,0 +1,83 @@
+/*********************
+GENERAL
+*********************/
+h1 {
+	text-align: center;
+	margin: 1em;
+}
+
+h2 {
+	text-align: center;
+	margin: 1em;
+}
+
+section {
+	margin: auto;
+	width: 60%;
+	background: lightgrey;
+	padding: .5em;
+}
+
+.intro {
+	margin: auto;
+	font-size: 14px;
+}
+
+section button {
+	display: block;
+	margin: auto;
+	text-align: center;
+}
+
+/*********************
+FORMS
+*********************/
+form {
+	margin: auto;
+	padding: .5em;
+}
+
+.hidden {
+	display:none;
+}
+
+legend {
+	margin: auto;
+}
+
+select {
+	display: block;
+	margin: auto;
+}
+
+input[type="radio"] {
+	margin: 0;
+}
+
+input[type="radio"] label {
+	display: inline;
+	margin: auto;
+}
+
+.form, .submit {
+	display: none;
+}
+
+#amount p {
+	margin: auto;
+	text-align: center;
+	padding-bottom: .5em;
+}
+
+/*********************
+FOOTER
+*********************/
+.twitter {
+	text-decoration: none;
+	color: #00aced;
+}
+
+footer {
+	text-align: center;
+	margin: 1em;
+}
