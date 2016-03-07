@@ -214,6 +214,36 @@ $(document).ready(function() {
 				});
 			});
 
+		// If the genre is commercials, the corresponding php file is posted.
+		}else if (formValOne ==  "commercials") {
+			console.log("commercials: " + formValOne);
+			var formId = "commercials";
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (xhttp.readyState == 4 && xhttp.status == 200) {
+			      document.getElementById(formId).innerHTML = xhttp.responseText;
+			    }
+			};
+		  	xhttp.open("POST", "includes/" + formId + ".php", true);
+		  	xhttp.send();
+			$(this).fadeOut(1000, function() {
+				$("form#" + formId).fadeIn(1000);
+			});
+
+			//If the commercials form changes, select value.
+			$("form#" + formId).change(function() {
+				var formValTwo = $("select.commercial-type").val();
+				console.log(formValTwo);
+				
+				
+				//Hide #commercial-type div of commercials form and show corresponding commissioning amount.
+				$("div#commercial-type").fadeOut(1000, function() {
+					$("h2", "div#amount").fadeIn(1000);
+					$("p." +formValTwo, "div#amount").fadeIn(1000);
+					$("p." + formValOne).fadeIn(1000);
+				});
+			});
+
 		}
 	});
 });
