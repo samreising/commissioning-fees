@@ -4,7 +4,7 @@ $(document).ready(function() {
 	$("#start").click(function() {
 		$(this).fadeOut(1000);
 		$(".intro").fadeOut(1000);
-		$("h1").fadeOut(1000);
+		$("h1").slideUp(1000);
 		formId = $("button").val();
 		console.log(formId);
 		var xhttp = new XMLHttpRequest();
@@ -98,6 +98,7 @@ $(document).ready(function() {
 				$("div#company-size").fadeOut(1000, function() {
 					$("h2", "div#amount").fadeIn(1000);
 					$("p." +formValTwo, "div#amount").fadeIn(1000);
+					$("p." + formValOne, "div#amount").fadeIn(1000);
 				});
 			});
 
@@ -152,6 +153,7 @@ $(document).ready(function() {
 					$("div#company-size").fadeOut(1000, function() {
 						$("h2", "div#amount").fadeIn(1000);
 						$("p." + formValThree, "div." +formValTwo, "div#amount").fadeIn(1000);
+						$("p." + formValOne, "div#amount").fadeIn(1000);
 					});
 				});
 			});

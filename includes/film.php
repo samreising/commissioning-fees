@@ -12,11 +12,11 @@
 
 <div id="amount">
 	<h2 class="commissioning-amount hidden">Commissioning Amount</h2>
-		<p class="major-studio hidden">$90,000-$1,000,000</p>
-		<p class="independent-feature hidden">$10,000-$200,000</p>
-		<p class="independent-short hidden">$1,000-$5,000</p>
-		<p class="documentary hidden">$5,000-$30,000</p>
-		<p class="film hidden">The composer’s fee can be either a negotiated 
+		<p class="major-studio amount hidden">$90,000-$1,000,000</p>
+		<p class="independent-feature amount hidden">$10,000-$200,000</p>
+		<p class="independent-short amount hidden">$1,000-$5,000</p>
+		<p class="documentary amount hidden">$5,000-$30,000</p>
+		<p class="film description hidden">The composer’s fee can be either a negotiated 
 			figure or part of a “package”—i.e., the portion of the music 
 			budget remaining after paying musicians, producing a soundtrack, 
 			and buying rights to existing music. Music budgets range from 
@@ -31,4 +31,7 @@
 			licensing fees for their member composers for television 
 			broadcasts and screenings abroad—which can amount to a 
 			considerable income if composer has retained publishing rights.</p>
+		<p class="film description hidden">The ranges above indicate typical net 
+			composer fees, depending on film budget, rights retained, and 
+			composer’s prestige. A composer seeking exposure may accept less.</p>
 </div>

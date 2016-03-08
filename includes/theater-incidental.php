@@ -11,7 +11,12 @@
 
 <div id="amount">
 	<h2 class="commissioning-amount hidden">Commissioning Amount</h2>
-		<p class="regional hidden">$3,000-$10,000</p>
-		<p class="off-broadway hidden">$3,000-$14,000</p>
-		<p class="broadway hidden">$8,000-$18,000</p>
+		<p class="regional amount hidden">$3,000-$10,000</p>
+		<p class="off-broadway amount hidden">$3,000-$14,000</p>
+		<p class="broadway amount hidden">$8,000-$18,000</p>
+	<p class = "theater description hidden">The range of 
+		commissioning fees depends on the amount of music needed. 
+		Individual composers may accept less, or command more. In 
+		addition, for shows with indefinite runs, royalties are 
+		generally paid per performance.</p>
 </div>

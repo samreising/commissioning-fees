@@ -11,10 +11,10 @@
 
 <div id="amount">
 	<h2 class="commissioning-amount hidden">Commissioning Amount</h2>
-		<p class="regional hidden">$1,000-$4,000</p>
-		<p class="national hidden">$3,000-$15,000</p>
-		<p class="logo hidden">$5,000-$50,000</p>
-		<p class="commercials hidden">Most music heard in commercials 
+		<p class="regional amount hidden">$1,000-$4,000</p>
+		<p class="national amount hidden">$3,000-$15,000</p>
+		<p class="logo amount hidden">$5,000-$50,000</p>
+		<p class="commercials description hidden">Most music heard in commercials 
 			is created by production houses which employ composers 
 			“for hire” and hold all rights to their music. The 
 			composer’s Creative Fee can be as much as 25-50% of 
@@ -25,6 +25,6 @@
 			future income depends on royalties as composer, paid 
 			by producer, and American Federation of Musicians 
 			recording payment as performer, arranger, or leader. 
-			The following ranges represent what a composer typically 
+			The above ranges represent what a composer typically 
 			nets. A composer seeking exposure may accept less.</p>
 </div>

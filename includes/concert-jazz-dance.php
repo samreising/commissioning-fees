@@ -9,9 +9,9 @@
 		<option name="instrumentation" value="trio-quartet">Trio or Quartet</option>
 		<option name="instrumentation" value="ensemble-five-ten">Ensemble of 5 to 10</option>
 		<option name="instrumentation" value="chorus">Chorus</option>
-		<option name="instrumentation" value="small-chamber">Small Chamber or Jazz Orchestra or Band
+		<option name="instrumentation" value="small-chamber">Small Chamber Orchestra or Band
 	(10–22 players)</option>
-		<option name="instrumentation" value="large-chamber">Large Chamber or Jazz Orchestra or Band
+		<option name="instrumentation" value="large-chamber">Large Chamber Orchestra or Band
 	(22–40 players)</option>
 	<option name="instrumentation" value="full-orchestra">Full Orchestra</option>
 	</select>
@@ -71,15 +71,17 @@
 		<p class="over-twentyfive amount hidden">$22,000-$58,000</p>
 	</div>
 	<div class="full-orchestra">
-		<p class="under-ten amount hidden">$9,000-$24,000</p>
-		<p class="ten-twentyfive amount hidden">$13,000-$60,000</p>
-		<p class="over-twentyfive amount hidden">$28,000-$95,000</p>
-		<p class ="full-orchestra hidden">(concerto or chorus: add 20-30%)</p>
+		<p class="under-ten amount hidden">$9,000-$24,000*</p>
+		<p class="ten-twentyfive amount hidden">$13,000-$60,000*</p>
+		<p class="over-twentyfive amount hidden">$28,000-$95,000*</p>
+		<p class ="full-orchestra footnote hidden">*(concerto or chorus: add 20-30%)</p>
 	</div>
-		<p class = "dance hidden">The prospect of grand rights income may 
-			induce the composer to accept reduced fees when composing for 
-			dance.</p>
-		<p class = "concert jazz dance hidden">Income from repeated performance of 
-			concert works is speculative. Most composers depend primarily 
-			on commissions.</p>
+	<p class = "dance description hidden">The prospect of grand rights income may 
+		induce the composer to accept reduced fees when composing for 
+		dance.</p>
+	<p class = "concert jazz dance description hidden">Income from repeated performance of 
+		concert works is speculative. Most composers depend primarily 
+		on commissions.When solo voice or a substantial electronic part 
+		is included in any of the above ensembles, add 20-30% to the 
+		indicated fee.</p>
 </div>

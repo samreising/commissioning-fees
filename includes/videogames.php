@@ -1,6 +1,6 @@
 <div id="amount">
 	<h2 class="videogames hidden">Commissioning Amount</h2>
-	<p class="videogames hidden">Composers are paid on a 
+	<p class="videogames description hidden">Composers are paid on a 
 		per-minute basis. A typical game may require 
 		anywhere from 20 to 80 minutes of music. Per-minute 
 		fees range from $500 up to $2,500. Some game studios 

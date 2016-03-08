@@ -10,9 +10,9 @@
 
 <div id="amount">
 	<h2 class="commissioning-amount hidden">Commissioning Amount</h2>
-		<p class="thirty-minutes hidden">$1,250-$12,000</p>
-		<p class="sixty-minutes hidden">$3,000-$25,000</p>
-		<p class="television hidden">The composer’s fee is usually 
+		<p class="thirty-minutes amount hidden">$1,250-$12,000</p>
+		<p class="sixty-minutes amount hidden">$3,000-$25,000</p>
+		<p class="television description hidden">The composer’s fee is usually 
 			negotiated as part of a “package”—i.e., the portion 
 			of the music budget remaining after paying musicians, 
 			producing a soundtrack, and buying the rights to music. 
@@ -21,7 +21,7 @@
 			less for public television. Credits as performer, 
 			orchestrator, and leader allow the composer to receive 
 			a package of benefits through the American Federation of 
-			Musicians. The following ranges represent what a composer 
+			Musicians. The above ranges represent what a composer 
 			typically nets. A composer seeking exposure may accept 
 			less.</p>
 </div>

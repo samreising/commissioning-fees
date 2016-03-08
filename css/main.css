@@ -1,14 +1,20 @@
 /*********************
 GENERAL
 *********************/
+body {
+	font-family: 'Droid Serif', serif;
+}
+
 h1 {
 	text-align: center;
-	margin: 1em;
+	padding: .5em;
+	margin: .5em;
 }
 
 h2 {
 	text-align: center;
-	padding-bottom: .25em;
+	margin: auto;
+	padding-bottom: .5em;
 }
 
 section {
@@ -16,20 +22,44 @@ section {
 	margin-top: 1em;
 	margin-bottom: 1em;
 	width: 60%;
-	background: lightgrey;
-	padding: .5em;
+	background: linear-gradient(45deg, rgba(255,0,0,0), #e6e6e6, rgba(255,0,0,0));
+	padding: 5em;
+	border-radius: 25px;
 }
 
 .intro {
 	margin: auto;
-	font-size: 14px;
+	font-size: .9em;
+	padding-bottom: .5em;
+	text-align: justify;
 }
 
-section button {
+p.description {
+	font-size: .9em;
+	text-align: justify;
+}
+
+a:hover {
+	font-weight: bold;
+}
+
+
+/*********************
+BUTTOn
+*********************/
+button {
 	display: block;
 	margin: auto;
 	text-align: center;
+	background: #f2f2f2;
+	border-radius: 5px;
+	box-shadow: -2px 2px 5px 1px rgba(0,0,0,.2);
 }
+
+button:hover {
+	font-weight: bold;
+}
+
 
 /*********************
 FORMS
@@ -47,9 +77,15 @@ legend {
 	margin: auto;
 }
 
+legend {
+	padding: .25em;
+}
+
 select {
 	display: block;
 	margin: auto;
+	background: #f2f2f2;
+	box-shadow: -2px 2px 5px 1px rgba(0,0,0,.2);
 }
 
 input[type="radio"] {
@@ -67,13 +103,20 @@ input[type="radio"] label {
 
 #amount p {
 	margin: auto;
-	padding-bottom: .5em;
+	padding: .25em;
+	margin: .25em;
 }
 
 #amount p.amount {
 	text-align: center;
 	font-size: 1.25em;
-	padding-bottom: 1em;
+	padding: .5em;
+	margin: .5em;
+}
+
+.footnote {
+	text-align: center;
+	font-size: .75em;
 }
 
 /*********************
