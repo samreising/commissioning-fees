@@ -3,6 +3,8 @@ GENERAL
 *********************/
 body {
 	font-family: 'Droid Serif', serif;
+	margin: auto;
+	width: 90%;
 }
 
 h1 {
@@ -17,13 +19,14 @@ h2 {
 	padding-bottom: .5em;
 }
 
-section {
-	margin: auto;
+section#wrapper {
+	margin:auto;
 	margin-top: 1em;
 	margin-bottom: 1em;
 	width: 60%;
-	background: linear-gradient(45deg, rgba(255,0,0,0), #e6e6e6, rgba(255,0,0,0));
-	padding: 5em;
+	max-width: 70%;
+	background: linear-gradient(45deg, rgba(255,255,255,0), #e6e6e6, rgba(255,255,255,0));
+	padding: 2em;
 	border-radius: 25px;
 }
 
@@ -84,6 +87,8 @@ legend {
 select {
 	display: block;
 	margin: auto;
+	width: 100%;
+	max-width:90%;
 	background: #f2f2f2;
 	box-shadow: -2px 2px 5px 1px rgba(0,0,0,.2);
 }

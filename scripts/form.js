@@ -1,5 +1,13 @@
 $(document).ready(function() {
 
+	//Create AJAX function
+	function correspondingForm(prevId,formId){
+		$("form#" + formId).load("includes/" + formId + ".php")
+		$(prevId).fadeOut(1000, function() {
+			$("form#" + formId).fadeIn(1000);
+		});
+	}
+
 	// Click "Get Started" to be taken to genre form.
 	$("#start").click(function() {
 		$(this).fadeOut(1000);
@@ -7,17 +15,8 @@ $(document).ready(function() {
 		$("h1").slideUp(1000);
 		formId = $("button").val();
 		console.log(formId);
-		var xhttp = new XMLHttpRequest();
-		xhttp.onreadystatechange = function() {
-			if (xhttp.readyState == 4 && xhttp.status == 200) {
-		      document.getElementById(formId).innerHTML = xhttp.responseText;
-		    }
-		};
-		xhttp.open("POST", "includes/genre.php", true);
-		xhttp.send();
-		$(this).fadeOut(1000, function() {
-			$("form#" + formId).fadeIn(1000);
-		});
+		//Complete AJAX request
+		correspondingForm(this, formId);
 	});
 
 	// If the genre form changes, get value.
@@ -29,17 +28,8 @@ $(document).ready(function() {
 		if (formValOne ==  "concert" || formValOne ==  "jazz" || formValOne ==  "dance") {
 			console.log("concert-jazz-dance: " + formValOne);
 			var formId = "concert-jazz-dance";
-			var xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-				if (xhttp.readyState == 4 && xhttp.status == 200) {
-			      document.getElementById(formId).innerHTML = xhttp.responseText;
-			    }
-			};
-		  	xhttp.open("POST", "includes/" + formId + ".php", true);
-		  	xhttp.send();
-			$(this).fadeOut(1000, function() {
-				$("form#" + formId).fadeIn(1000);
-			});
+			//Complete AJAX request
+			correspondingForm(this,formId);
 
 			//If the concert-jazz form changes, select value.
 			$("form#" + formId).change(function() {
@@ -76,17 +66,8 @@ $(document).ready(function() {
 		}else if (formValOne ==  "theater") {
 			console.log("theater-incidental: " + formValOne);
 			var formId = "theater-incidental";
-			var xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-				if (xhttp.readyState == 4 && xhttp.status == 200) {
-			      document.getElementById(formId).innerHTML = xhttp.responseText;
-			    }
-			};
-		  	xhttp.open("POST", "includes/" + formId + ".php", true);
-		  	xhttp.send();
-			$(this).fadeOut(1000, function() {
-				$("form#" + formId).fadeIn(1000);
-			});
+			//Complete AJAX request
+			correspondingForm(this,formId);
 
 			//If the theater-incidental form changes, select value.
 			$("form#" + formId).change(function() {
@@ -106,33 +87,16 @@ $(document).ready(function() {
 		}else if (formValOne ==  "musical-theater") {
 			console.log("musical-theater: " + formValOne);
 			var formId = "musical-theater";
-			var xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-				if (xhttp.readyState == 4 && xhttp.status == 200) {
-			      document.getElementById(formId).innerHTML = xhttp.responseText;
-			    }
-			};
-		  	xhttp.open("POST", "includes/" + formId + ".php", true);
-		  	xhttp.send();
-			$(this).fadeOut(1000, function() {
-				$("form#" + formId).fadeIn(1000);
-			});
+			//Complete AJAX request
+			correspondingForm(this,formId);
 
 		// If the genre is opera, the corresponding php file is posted.
 		}else if (formValOne ==  "opera") {
 			console.log("opera: " + formValOne);
 			var formId = "opera";
 			var xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-				if (xhttp.readyState == 4 && xhttp.status == 200) {
-			      document.getElementById(formId).innerHTML = xhttp.responseText;
-			    }
-			};
-		  	xhttp.open("POST", "includes/" + formId + ".php", true);
-		  	xhttp.send();
-			$(this).fadeOut(1000, function() {
-				$("form#" + formId).fadeIn(1000);
-			});
+			//Complete AJAX request
+			correspondingForm(this,formId);
 
 			//If the opera form changes, select value.
 			$("form#" + formId).change(function() {
@@ -144,7 +108,7 @@ $(document).ready(function() {
 					$("div#company-size").fadeIn(1000);
 				});
 
-				//If the concert-jazz form changes, select value.
+				//If the opera form changes, select value.
 				$("form#" + formId).change(function() {
 					var formValThree = $("select.company-size").val();
 					console.log(formValThree);
@@ -161,17 +125,8 @@ $(document).ready(function() {
 		}else if (formValOne ==  "film") {
 			console.log("film: " + formValOne);
 			var formId = "film";
-			var xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-				if (xhttp.readyState == 4 && xhttp.status == 200) {
-			      document.getElementById(formId).innerHTML = xhttp.responseText;
-			    }
-			};
-		  	xhttp.open("POST", "includes/" + formId + ".php", true);
-		  	xhttp.send();
-			$(this).fadeOut(1000, function() {
-				$("form#" + formId).fadeIn(1000);
-			});
+			//Complete AJAX request
+			correspondingForm(this,formId);
 
 			//If the film form changes, select value.
 			$("form#" + formId).change(function() {
@@ -192,16 +147,8 @@ $(document).ready(function() {
 			console.log("television: " + formValOne);
 			var formId = "television";
 			var xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-				if (xhttp.readyState == 4 && xhttp.status == 200) {
-			      document.getElementById(formId).innerHTML = xhttp.responseText;
-			    }
-			};
-		  	xhttp.open("POST", "includes/" + formId + ".php", true);
-		  	xhttp.send();
-			$(this).fadeOut(1000, function() {
-				$("form#" + formId).fadeIn(1000);
-			});
+			//Complete AJAX request
+			correspondingForm(this,formId);
 
 			//If the television form changes, select value.
 			$("form#" + formId).change(function() {
@@ -222,16 +169,8 @@ $(document).ready(function() {
 			console.log("commercials: " + formValOne);
 			var formId = "commercials";
 			var xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-				if (xhttp.readyState == 4 && xhttp.status == 200) {
-			      document.getElementById(formId).innerHTML = xhttp.responseText;
-			    }
-			};
-		  	xhttp.open("POST", "includes/" + formId + ".php", true);
-		  	xhttp.send();
-			$(this).fadeOut(1000, function() {
-				$("form#" + formId).fadeIn(1000);
-			});
+			//Complete AJAX request
+			correspondingForm(this,formId);
 
 			//If the commercials form changes, select value.
 			$("form#" + formId).change(function() {
@@ -251,17 +190,8 @@ $(document).ready(function() {
 		}else if (formValOne ==  "libraries") {
 			console.log("libraries: " + formValOne);
 			var formId = "libraries";
-			var xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-				if (xhttp.readyState == 4 && xhttp.status == 200) {
-			      document.getElementById(formId).innerHTML = xhttp.responseText;
-			    }
-			};
-		  	xhttp.open("POST", "includes/" + formId + ".php", true);
-		  	xhttp.send();
-			$(this).fadeOut(1000, function() {
-				$("form#" + formId).fadeIn(1000);
-			});
+			//Complete AJAX request
+			correspondingForm(this,formId);
 
 			//If the libraries form changes, select value.
 			$("form#" + formId).change(function() {
@@ -282,19 +212,8 @@ $(document).ready(function() {
 			console.log("videogames: " + formValOne);
 			var formId = "videogames";
 			var xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-				if (xhttp.readyState == 4 && xhttp.status == 200) {
-			      document.getElementById(formId).innerHTML = xhttp.responseText;
-			    }
-			};
-		  	xhttp.open("POST", "includes/" + formId + ".php", true);
-		  	xhttp.send();
-			$(this).fadeOut(1000, function() {
-				$("form#" + formId).fadeIn(1000);
-				$("h2", "div#amount").fadeIn(1000);
-				$("p." + formValOne, "div#amount").fadeIn(1000);
-				$("button." + formValOne, "div#amount").fadeIn(1000);
-			});
+			//Complete AJAX request
+			correspondingForm(this,formId);
 
 		}
 	});
