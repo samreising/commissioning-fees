@@ -30,10 +30,8 @@ $(document).ready(function() {
 						$("h2", "div#amount").fadeIn(1000);
 						$("p." + formValThree, "div." +formValTwo, "div#amount").fadeIn(1000);
 						$("p." + formValOne, "div#amount").fadeIn(1000);
-						//Fade in if full-orchestra is selected.
 						if (formValTwo == "full-orchestra") {
 							$("p." + formValTwo, "div." +formValTwo, "div#amount").fadeIn(1000);
-						//Fade in if dance is selected.
 						}else if (formValOne == "dance") {
 							$("p." + formValOne, "div#amount").fadeIn(1000);
 						}
@@ -41,29 +39,15 @@ $(document).ready(function() {
 				});
 			});
 
-		// If the genre is theater or incidental music, the corresponding php file is posted.
 		}else if (formValOne ==  "theater") {
-			console.log("theater-incidental: " + formValOne);
 			var formId = "theater-incidental";
-			var xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-				if (xhttp.readyState == 4 && xhttp.status == 200) {
-			      document.getElementById(formId).innerHTML = xhttp.responseText;
-			    }
-			};
-		  	xhttp.open("POST", "includes/" + formId + ".php", true);
-		  	xhttp.send();
 			$(this).fadeOut(1000, function() {
 				$("form#" + formId).fadeIn(1000);
 			});
 
-			//If the theater-incidental form changes, select value.
 			$("form#" + formId).change(function() {
 				var formValTwo = $("select.company-size").val();
-				console.log(formValTwo);
-				
-				
-				//Hide #company-size div of theater-incidental form and show corresponding commissioning amount.
+
 				$("div#company-size").fadeOut(1000, function() {
 					$("h2", "div#amount").fadeIn(1000);
 					$("p." +formValTwo, "div#amount").fadeIn(1000);
