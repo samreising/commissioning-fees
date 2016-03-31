@@ -6,33 +6,17 @@ $(document).ready(function() {
 		$("#genre").fadeIn(1000);
 	});
 
-	// If the genre form changes, get value.
 	$("form#genre").change(function() {
 		var formValOne = $("select").val();
-		console.log("formValOne: " + formValOne);
+		$("#genre").hide(1000);
 
-		// If the genre is concert music or jazz, the corresponding php file is posted.
 		if (formValOne ==  "concert" || formValOne ==  "jazz" || formValOne ==  "dance") {
-			console.log("concert-jazz-dance: " + formValOne);
 			var formId = "concert-jazz-dance";
-			var xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-				if (xhttp.readyState == 4 && xhttp.status == 200) {
-			      document.getElementById(formId).innerHTML = xhttp.responseText;
-			    }
-			};
-		  	xhttp.open("POST", "includes/" + formId + ".php", true);
-		  	xhttp.send();
-			$(this).fadeOut(1000, function() {
-				$("form#" + formId).fadeIn(1000);
-			});
+			$("#" + formId).fadeIn(1000);
 
-			//If the concert-jazz form changes, select value.
 			$("form#" + formId).change(function() {
 				var formValTwo = $("select.instrumentation").val();
-				console.log("formValTwo: " + formValTwo);
 				
-				//Hide #instrumentation div and show #duration div of concert-jazz form.
 				$("div#instrumentation").fadeOut(1000, function() {
 					$("div#duration").fadeIn(1000);
 				});
