@@ -97,29 +97,14 @@ $(document).ready(function() {
 				});
 			});
 
-		// If the genre is television, the corresponding php file is posted.
-		}else if (formValOne ==  "television") {
-			console.log("television: " + formValOne);
+		} else if (formValOne ==  "television") {
 			var formId = "television";
-			var xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-				if (xhttp.readyState == 4 && xhttp.status == 200) {
-			      document.getElementById(formId).innerHTML = xhttp.responseText;
-			    }
-			};
-		  	xhttp.open("POST", "includes/" + formId + ".php", true);
-		  	xhttp.send();
 			$(this).fadeOut(1000, function() {
 				$("form#" + formId).fadeIn(1000);
 			});
 
-			//If the television form changes, select value.
 			$("form#" + formId).change(function() {
 				var formValTwo = $("select.episode-length").val();
-				console.log(formValTwo);
-				
-				
-				//Hide #episode-length div of film form and show corresponding commissioning amount.
 				$("div#episode-length").fadeOut(1000, function() {
 					$("h2", "div#amount").fadeIn(1000);
 					$("p." +formValTwo, "div#amount").fadeIn(1000);
