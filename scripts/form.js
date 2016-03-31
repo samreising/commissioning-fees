@@ -2,22 +2,8 @@ $(document).ready(function() {
 
 	// Click "Get Started" to be taken to genre form.
 	$("#start").click(function() {
-		$(this).fadeOut(1000);
-		$(".intro").fadeOut(1000);
-		$("h1").slideUp(1000);
-		formId = $("button").val();
-		console.log(formId);
-		var xhttp = new XMLHttpRequest();
-		xhttp.onreadystatechange = function() {
-			if (xhttp.readyState == 4 && xhttp.status == 200) {
-		      document.getElementById(formId).innerHTML = xhttp.responseText;
-		    }
-		};
-		xhttp.open("POST", "includes/genre.php", true);
-		xhttp.send();
-		$(this).fadeOut(1000, function() {
-			$("form#" + formId).fadeIn(1000);
-		});
+		$("#intro").hide();
+		$("#genre").fadeIn(1000);
 	});
 
 	// If the genre form changes, get value.
