@@ -431,39 +431,39 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 		<script>
-			$("#start").click(function() {
-					$("#intro").fadeOut(1000, function() {
-						$("#genre").fadeIn(1000);
+			jQuery("#start").click(function() {
+					jQuery("#intro").fadeOut(1000, function() {
+						jQuery("#genre").fadeIn(1000);
 					});
 				});
 
-				$("form#genre").change(function() {
-					var formValOne = $("select").val();
+				jQuery("form#genre").change(function() {
+					var formValOne = jQuery("select").val();
 
 					if (formValOne ==  "concert" || formValOne ==  "jazz" || formValOne ==  "dance") {
 						var formId = "concert-jazz-dance";
-						$("#genre").fadeOut(1000, function() {
-							$("#" + formId).fadeIn(1000);
+						jQuery("#genre").fadeOut(1000, function() {
+							jQuery("#" + formId).fadeIn(1000);
 						});
 
-						$("form#" + formId).change(function() {
-							var formValTwo = $("select.instrumentation").val();
+						jQuery("form#" + formId).change(function() {
+							var formValTwo = jQuery("select.instrumentation").val();
 
-							$("div#instrumentation").fadeOut(1000, function() {
-								$("div#duration").fadeIn(1000);
+							jQuery("div#instrumentation").fadeOut(1000, function() {
+								jQuery("div#duration").fadeIn(1000);
 							});
 
-							$("form#" + formId).change(function() {
-								var formValThree = $("select.duration").val();
+							jQuery("form#" + formId).change(function() {
+								var formValThree = jQuery("select.duration").val();
 
-								$("div#duration").fadeOut(1000, function() {
-									$("h2", "div#amount").fadeIn(1000);
-									$("p." + formValThree, "div." +formValTwo, "div#amount").fadeIn(1000);
-									$("p." + formValOne, "div#amount").fadeIn(1000);
+								jQuery("div#duration").fadeOut(1000, function() {
+									jQuery("h2", "div#amount").fadeIn(1000);
+									jQuery("p." + formValThree, "div." +formValTwo, "div#amount").fadeIn(1000);
+									jQuery("p." + formValOne, "div#amount").fadeIn(1000);
 									if (formValTwo == "full-orchestra") {
-										$("p." + formValTwo, "div." +formValTwo, "div#amount").fadeIn(1000);
+										jQuery("p." + formValTwo, "div." +formValTwo, "div#amount").fadeIn(1000);
 									}else if (formValOne == "dance") {
-										$("p." + formValOne, "div#amount").fadeIn(1000);
+										jQuery("p." + formValOne, "div#amount").fadeIn(1000);
 									}
 								});
 							});
@@ -471,115 +471,115 @@
 
 					} else if (formValOne ==  "theater") {
 						var formId = "theater-incidental";
-						$(this).fadeOut(1000, function() {
-							$("form#" + formId).fadeIn(1000);
+						jQuery(this).fadeOut(1000, function() {
+							jQuery("form#" + formId).fadeIn(1000);
 						});
 
-						$("form#" + formId).change(function() {
-							var formValTwo = $("select.company-size").val();
+						jQuery("form#" + formId).change(function() {
+							var formValTwo = jQuery("select.company-size").val();
 
-							$("div#company-size").fadeOut(1000, function() {
-								$("h2", "div#amount").fadeIn(1000);
-								$("p." +formValTwo, "div#amount").fadeIn(1000);
-								$("p." + formValOne, "div#amount").fadeIn(1000);
+							jQuery("div#company-size").fadeOut(1000, function() {
+								jQuery("h2", "div#amount").fadeIn(1000);
+								jQuery("p." +formValTwo, "div#amount").fadeIn(1000);
+								jQuery("p." + formValOne, "div#amount").fadeIn(1000);
 							});
 						});
 
 					} else if (formValOne ==  "musical-theater") {
 						var formId = "musical-theater";
-						$(this).fadeOut(1000, function() {
-							$("form#" + formId).fadeIn(1000);
+						jQuery(this).fadeOut(1000, function() {
+							jQuery("form#" + formId).fadeIn(1000);
 						});
 
 					} else if (formValOne ==  "opera") {
 						var formId = "opera";
-						$(this).fadeOut(1000, function() {
-							$("form#" + formId).fadeIn(1000);
+						jQuery(this).fadeOut(1000, function() {
+							jQuery("form#" + formId).fadeIn(1000);
 						});
 
-						$("form#" + formId).change(function() {
-							var formValTwo = $("select.opera-length").val();
+						jQuery("form#" + formId).change(function() {
+							var formValTwo = jQuery("select.opera-length").val();
 
-							$("div#opera-length").fadeOut(1000, function() {
-								$("div#opera-company-size").fadeIn(1000);
+							jQuery("div#opera-length").fadeOut(1000, function() {
+								jQuery("div#opera-company-size").fadeIn(1000);
 							});
 
-							$("form#" + formId).change(function() {
-								var formValThree = $("select.opera-company-size").val();
-								$("div#opera-company-size").fadeOut(1000, function() {
-									$("h2", "div#amount").fadeIn(1000);
-									$("p." + formValThree, "div." +formValTwo, "div#amount").fadeIn(1000);
-									$("p." + formValOne, "div#amount").fadeIn(1000);
+							jQuery("form#" + formId).change(function() {
+								var formValThree = jQuery("select.opera-company-size").val();
+								jQuery("div#opera-company-size").fadeOut(1000, function() {
+									jQuery("h2", "div#amount").fadeIn(1000);
+									jQuery("p." + formValThree, "div." +formValTwo, "div#amount").fadeIn(1000);
+									jQuery("p." + formValOne, "div#amount").fadeIn(1000);
 								});
 							});
 						});
 					} else if (formValOne ==  "film") {
 						var formId = "film";
-						$(this).fadeOut(1000, function() {
-							$("form#" + formId).fadeIn(1000);
+						jQuery(this).fadeOut(1000, function() {
+							jQuery("form#" + formId).fadeIn(1000);
 						});
 
-						$("form#" + formId).change(function() {
-							var formValTwo = $("select.production-size").val();
-							$("div#production-size").fadeOut(1000, function() {
-								$("h2", "div#amount").fadeIn(1000);
-								$("p." +formValTwo, "div#amount").fadeIn(1000);
-								$("p." + formValOne).fadeIn(1000);
+						jQuery("form#" + formId).change(function() {
+							var formValTwo = jQuery("select.production-size").val();
+							jQuery("div#production-size").fadeOut(1000, function() {
+								jQuery("h2", "div#amount").fadeIn(1000);
+								jQuery("p." +formValTwo, "div#amount").fadeIn(1000);
+								jQuery("p." + formValOne).fadeIn(1000);
 							});
 						});
 
 					} else if (formValOne ==  "television") {
 						var formId = "television";
-						$(this).fadeOut(1000, function() {
-							$("form#" + formId).fadeIn(1000);
+						jQuery(this).fadeOut(1000, function() {
+							jQuery("form#" + formId).fadeIn(1000);
 						});
 
-						$("form#" + formId).change(function() {
-							var formValTwo = $("select.episode-length").val();
-							$("div#episode-length").fadeOut(1000, function() {
-								$("h2", "div#amount").fadeIn(1000);
-								$("p." +formValTwo, "div#amount").fadeIn(1000);
-								$("p." + formValOne).fadeIn(1000);
+						jQuery("form#" + formId).change(function() {
+							var formValTwo = jQuery("select.episode-length").val();
+							jQuery("div#episode-length").fadeOut(1000, function() {
+								jQuery("h2", "div#amount").fadeIn(1000);
+								jQuery("p." +formValTwo, "div#amount").fadeIn(1000);
+								jQuery("p." + formValOne).fadeIn(1000);
 							});
 						});
 
 					} else if (formValOne ==  "commercials") {
 						var formId = "commercials";
-						$(this).fadeOut(1000, function() {
-							$("form#" + formId).fadeIn(1000);
+						jQuery(this).fadeOut(1000, function() {
+							jQuery("form#" + formId).fadeIn(1000);
 						});
 
-						$("form#" + formId).change(function() {
-							var formValTwo = $("select.commercial-type").val();
-							$("div#commercial-type").fadeOut(1000, function() {
-								$("h2", "div#amount").fadeIn(1000);
-								$("p." +formValTwo, "div#amount").fadeIn(1000);
-								$("p." + formValOne).fadeIn(1000);
+						jQuery("form#" + formId).change(function() {
+							var formValTwo = jQuery("select.commercial-type").val();
+							jQuery("div#commercial-type").fadeOut(1000, function() {
+								jQuery("h2", "div#amount").fadeIn(1000);
+								jQuery("p." +formValTwo, "div#amount").fadeIn(1000);
+								jQuery("p." + formValOne).fadeIn(1000);
 							});
 						});
 
 					} else if (formValOne ==  "libraries") {
 						var formId = "libraries";
-						$(this).fadeOut(1000, function() {
-							$("form#" + formId).fadeIn(1000);
+						jQuery(this).fadeOut(1000, function() {
+							jQuery("form#" + formId).fadeIn(1000);
 						});
 
-						$("form#" + formId).change(function() {
-							var formValTwo = $("select.library-type").val();
-							$("div#library-type").fadeOut(1000, function() {
-								$("h2", "div#amount").fadeIn(1000);
-								$("p." +formValTwo, "div#amount").fadeIn(1000);
-								$("p." + formValOne).fadeIn(1000);
+						jQuery("form#" + formId).change(function() {
+							var formValTwo = jQuery("select.library-type").val();
+							jQuery("div#library-type").fadeOut(1000, function() {
+								jQuery("h2", "div#amount").fadeIn(1000);
+								jQuery("p." +formValTwo, "div#amount").fadeIn(1000);
+								jQuery("p." + formValOne).fadeIn(1000);
 							});
 						});
 
 					} else if (formValOne ==  "videogames") {
 						var formId = "videogames";
-						$(this).fadeOut(1000, function() {
-							$("form#" + formId).fadeIn(1000);
-							$("h2", "div#amount").fadeIn(1000);
-							$("p." + formValOne, "div#amount").fadeIn(1000);
-							$("button." + formValOne, "div#amount").fadeIn(1000);
+						jQuery(this).fadeOut(1000, function() {
+							jQuery("form#" + formId).fadeIn(1000);
+							jQuery("h2", "div#amount").fadeIn(1000);
+							jQuery("p." + formValOne, "div#amount").fadeIn(1000);
+							jQuery("button." + formValOne, "div#amount").fadeIn(1000);
 						});
 					}
 				});
