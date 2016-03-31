@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-	// Click "Get Started" to be taken to genre form.
 	$("#start").click(function() {
 		$("#intro").fadeOut(1000, function() {
 			$("#genre").fadeIn(1000);
@@ -39,7 +38,7 @@ $(document).ready(function() {
 				});
 			});
 
-		}else if (formValOne ==  "theater") {
+		} else if (formValOne ==  "theater") {
 			var formId = "theater-incidental";
 			$(this).fadeOut(1000, function() {
 				$("form#" + formId).fadeIn(1000);
