@@ -127,29 +127,14 @@ $(document).ready(function() {
 				});
 			});
 
-		// If the genre is libraries, the corresponding php file is posted.
-		}else if (formValOne ==  "libraries") {
-			console.log("libraries: " + formValOne);
+		} else if (formValOne ==  "libraries") {
 			var formId = "libraries";
-			var xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-				if (xhttp.readyState == 4 && xhttp.status == 200) {
-			      document.getElementById(formId).innerHTML = xhttp.responseText;
-			    }
-			};
-		  	xhttp.open("POST", "includes/" + formId + ".php", true);
-		  	xhttp.send();
 			$(this).fadeOut(1000, function() {
 				$("form#" + formId).fadeIn(1000);
 			});
 
-			//If the libraries form changes, select value.
 			$("form#" + formId).change(function() {
 				var formValTwo = $("select.library-type").val();
-				console.log(formValTwo);
-				
-				
-				//Hide #library-type div of commercials form and show corresponding commissioning amount.
 				$("div#library-type").fadeOut(1000, function() {
 					$("h2", "div#amount").fadeIn(1000);
 					$("p." +formValTwo, "div#amount").fadeIn(1000);
