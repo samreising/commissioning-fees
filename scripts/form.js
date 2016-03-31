@@ -55,24 +55,13 @@ $(document).ready(function() {
 				});
 			});
 
-		// If the genre is musical theater, the corresponding php file is posted.
-		}else if (formValOne ==  "musical-theater") {
-			console.log("musical-theater: " + formValOne);
+		} else if (formValOne ==  "musical-theater") {
 			var formId = "musical-theater";
-			var xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-				if (xhttp.readyState == 4 && xhttp.status == 200) {
-			      document.getElementById(formId).innerHTML = xhttp.responseText;
-			    }
-			};
-		  	xhttp.open("POST", "includes/" + formId + ".php", true);
-		  	xhttp.send();
 			$(this).fadeOut(1000, function() {
 				$("form#" + formId).fadeIn(1000);
 			});
 
-		// If the genre is opera, the corresponding php file is posted.
-		}else if (formValOne ==  "opera") {
+		} else if (formValOne ==  "opera") {
 			console.log("opera: " + formValOne);
 			var formId = "opera";
 			var xhttp = new XMLHttpRequest();
