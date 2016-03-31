@@ -9,11 +9,12 @@ $(document).ready(function() {
 
 	$("form#genre").change(function() {
 		var formValOne = $("select").val();
-		$("#genre").hide(1000);
 
 		if (formValOne ==  "concert" || formValOne ==  "jazz" || formValOne ==  "dance") {
 			var formId = "concert-jazz-dance";
-			$("#" + formId).fadeIn(1000);
+			$("#genre").fadeOut(1000, function() {
+				$("#" + formId).fadeIn(1000);
+			});
 
 			$("form#" + formId).change(function() {
 				var formValTwo = $("select.instrumentation").val();
