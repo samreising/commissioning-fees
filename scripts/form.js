@@ -2,8 +2,9 @@ $(document).ready(function() {
 
 	// Click "Get Started" to be taken to genre form.
 	$("#start").click(function() {
-		$("#intro").hide();
-		$("#genre").fadeIn(1000);
+		$("#intro").fadeOut(1000, function() {
+			$("#genre").fadeIn(1000);
+		});
 	});
 
 	$("form#genre").change(function() {
