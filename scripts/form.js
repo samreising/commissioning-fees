@@ -61,37 +61,21 @@ $(document).ready(function() {
 			});
 
 		} else if (formValOne ==  "opera") {
-			console.log("opera: " + formValOne);
 			var formId = "opera";
-			var xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-				if (xhttp.readyState == 4 && xhttp.status == 200) {
-			      document.getElementById(formId).innerHTML = xhttp.responseText;
-			    }
-			};
-		  	xhttp.open("POST", "includes/" + formId + ".php", true);
-		  	xhttp.send();
 			$(this).fadeOut(1000, function() {
 				$("form#" + formId).fadeIn(1000);
 			});
 
-			//If the opera form changes, select value.
 			$("form#" + formId).change(function() {
 				var formValTwo = $("select.opera-length").val();
-				console.log(formValTwo);
 				
-				//Hide #opera-length div and show #company-size div of opera form.
 				$("div#opera-length").fadeOut(1000, function() {
-					$("div#company-size").fadeIn(1000);
+					$("div#opera-company-size").fadeIn(1000);
 				});
 
-				//If the concert-jazz form changes, select value.
 				$("form#" + formId).change(function() {
-					var formValThree = $("select.company-size").val();
-					console.log(formValThree);
-					
-					//Hide #company-size div of opera form and show corresponding commissioning amount.
-					$("div#company-size").fadeOut(1000, function() {
+					var formValThree = $("select.opera-company-size").val();
+					$("div#opera-company-size").fadeOut(1000, function() {
 						$("h2", "div#amount").fadeIn(1000);
 						$("p." + formValThree, "div." +formValTwo, "div#amount").fadeIn(1000);
 						$("p." + formValOne, "div#amount").fadeIn(1000);
