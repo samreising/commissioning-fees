@@ -22,12 +22,9 @@ $(document).ready(function() {
 					$("div#duration").fadeIn(1000);
 				});
 
-				//If the concert-jazz form changes, select value.
 				$("form#" + formId).change(function() {
 					var formValThree = $("select.duration").val();
-					console.log("formValThree: " + formValThree);
 					
-					//Hide #duration div of concert-jazz form and show corresponding commissioning amount.
 					$("div#duration").fadeOut(1000, function() {
 						$("h2", "div#amount").fadeIn(1000);
 						$("p." + formValThree, "div." +formValTwo, "div#amount").fadeIn(1000);
